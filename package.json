@@ -1,7 +1,10 @@
 {
 	"name":"webman",
 	"version":"0.0.0",
-	"dependencies":{
+	"scripts": {
+		"start" : "http-server"
+	},
+	"dependencies" : {
 		"http-server":"*"
 	}
 }
