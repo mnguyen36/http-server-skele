@@ -23,17 +23,22 @@ angular.module('main.controllers', ['ngAnimate'])
     })
 
 
-    .controller('MainCtrl', function($scope, posts, $http){
-        $http.get('/api/templates').success(function(data){
-            $scope.templates = data;
-        })
+    .controller('MainCtrl', function($scope, $http){
+        $scope.templates = [{
+            "_id":"someId",
+            "title":"Some Title"
+        }];
+        // $http.get('/api/templates').success(function(data){
+        //     $scope.templates = data;
+        // })
 
     })
     .controller('TemplateCtrl', function($scope, $http, $stateParams){
 
         $scope.templates =
             [ { name: 'MC', url: '../partials/modals/mctemplate.html'},
-                {name:'TF', url:'../partials/modals/tftemplate.html'}
+                {name:'TF', url:'../partials/modals/tftemplate.html'},
+                {name:'RATE', url: '../partials/modals/ratetemplate.html'}
                 ];
 
         $scope.template = $scope.templates[0];
