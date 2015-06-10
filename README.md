@@ -1,7 +1,7 @@
 # Simple Static Stuff
 
-$ npm install http-server -g
+$ npm install
 
-$ http-server
+$ npm start
 
 Go to localhost:8080
